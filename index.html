@@ -293,6 +293,8 @@ advantages
 
 * can work with large datas
 
+* better performance, then rdbms
+
 disadvantages
 * flexible schema, if a process in the backend work with these datas
   * maybe data must be manualle modified
@@ -300,7 +302,7 @@ disadvantages
 * eventual consistency
   * within a transaction is in progres, datas can be inconsistency
 
-* 
+* simple queries require programming expertise
 
 
 ]
@@ -313,8 +315,8 @@ disadvantages
 ### use cases
 ]
 .right-column[
-* social media plattforms or shopping plattform are using with NoSQL Databases
-  * working better with algorithm
+* social media plattforms or shopping plattform are using NoSQL Databases
+  * working better with algorithm, because so complex join needed
   * much faster then sql
 ]
 
@@ -342,7 +344,7 @@ disadvantages
 .right-column[
 * MongoDB, Lotus Notes(IBM)
 
-* datas will be stored as documents
+* datas will be stored as documents in collections
 
 * key-value pairs inside the documents
 
@@ -387,8 +389,6 @@ disadvantages
 
 * Edge(relation) and Nodes
 
-* easy traverse can handle expensive joins
-
 ### Advantages
 * better performance as for relation databases
 * no rekursive nested joins needed
@@ -414,7 +414,11 @@ disadvantages
 ]
 
 .right-column[
-* Redis 
+* Redis
+
+* keys, which point on values
+
+* in-memory, on-disk
 
 ### Advantages
 * scaleable
@@ -428,7 +432,7 @@ disadvantages
 ### Usecase
 * Amazon shopping card (Amazon Dynamo)
 
-* can be used at every system, where data must be high availible
+* can be used at every system, where data must be high available
   and a short reaction time
 
 ]
@@ -436,9 +440,6 @@ disadvantages
 ---
 
 class: middle, center, inverse
-
-## Summary
-### Think about what you want and then what you will use!
 
 
 #### sources:
