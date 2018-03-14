@@ -151,13 +151,15 @@ class: center, middle, inverse
 
 1. SQL
   * DDL,DML,DCL
-  * advantages / disadvantages
-  * use cases
+  * Advantages
+  * Disadvantages
+  * Use Case
 
 2. NoSQL
   * DDL,DML
-  * advantages / disadvantages
-  * use cases
+  * Advantages
+  * Disadvantages
+  * Use Case
 
 3. NoSQL Forms
   * Document stores
@@ -178,8 +180,8 @@ class: center, middle, inverse
 create table 'tablename';
 ```
 
-* Data modulation Language
-  * select, update, insert
+* Data Manipulation Language
+  * select, update, insert, delete
 
 ### select
 ```sql
@@ -191,7 +193,7 @@ select * from 'table name';
 
 ### grant
 ```sql
-grant select,update on Table 'tablename'; 
+grant select,update on Table 'tablename';
 ```
 ]
 
@@ -200,10 +202,10 @@ grant select,update on Table 'tablename';
 .left-column[
 ## SQL
 ### DLL,DML,DCL
-### advantages / disadvantages
+### Advantages
 ]
 .right-column[
-advantages
+Advantages
 * referential integrity of datas is guaranteed
 
 * normalization of datas within the database
@@ -211,8 +213,18 @@ advantages
 * relationships between datas
 
 * transactions can be used to get reports
+]
 
-disadvantages
+---
+
+.left-column[
+## SQL
+### DLL,DML,DCL
+### Advantages
+### Disadvantages
+]
+.right-column[
+Disadvantages
 * each transaction on a table, block this table (isolation)
 
 * data must be in structed format
@@ -231,13 +243,14 @@ disadvantages
 .left-column[
 ## SQL
 ### DLL,DML,DCL
-### advantages / disadvantages
+### Advantages
+### Disadvantages
 ### use cases
 ]
 .right-column[
 * rdbms is used by many companys, which are using accounting or customer informations
   * easy to save customer informations
-  * easy to get reports with join,select dml 
+  * easy to get reports with join,select dml
   ]
 
 ---
@@ -254,10 +267,10 @@ disadvantages
 db.createCollection ("awesome")
 ```
 
-* Data modulation Language
+* Data Manipulation Language
 
 ### insert
-```json 
+```json
 db.awesome.insertOne ({
   firstname: "Marcel",
   lastname: "Reuter",
@@ -268,7 +281,7 @@ db.awesome.insertOne ({
 ### select
 ```json
 db.awesome.find ({})
-{ 
+{
   "_id" : ObjectId("5aa04d0f4c2a329b3900585d"),
   "firstname" : "Marcel",
   "lastname" : "Reuter",
@@ -276,15 +289,16 @@ db.awesome.find ({})
 }
 ```
 ]
+
 ---
 
 .left-column[
 ## NoSQL
 ### DDL,DML
-### advantages / disadvantages
+### Advantages
 ]
 .right-column[
-advantages
+Advantages
 * data must not be preprocessing to load these data into the database
 
 * Scale-Out and high avability
@@ -294,8 +308,18 @@ advantages
 * can work with large datas
 
 * better performance, then rdbms
+]
 
-disadvantages
+---
+
+.left-column[
+## NoSQL
+### DDL,DML
+### Advantages
+### Disadvantages
+]
+.right-column[
+Disadvantages
 * flexible schema, if a process in the backend work with these datas
   * maybe data must be manualle modified
 
@@ -303,15 +327,14 @@ disadvantages
   * within a transaction is in progres, datas can be inconsistency
 
 * simple queries require programming expertise
-
-
 ]
 ---
 
 .left-column[
 ## NoSQL
 ### DDL,DML
-### advantages / disadvantages
+### Advantages
+### Disadvantages
 ### use cases
 ]
 .right-column[
@@ -351,9 +374,9 @@ disadvantages
 * no schema needed
 
 ### Advantages
-* views can be directly created, there is no 
+* views can be directly created, there is no
   interactions with other tables needed
-* scalebale 
+* scalebale
 * best use for HTML forms
 
 ### Disadvantages
