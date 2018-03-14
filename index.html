@@ -152,12 +152,12 @@ class: center, middle, inverse
 1. SQL
   * DDL,DML,DCL
   * advantages / disadvantages
-  * usecases
+  * use cases
 
 2. NoSQL
   * DDL,DML
   * advantages / disadvantages
-  * usecases
+  * use cases
 
 3. NoSQL Forms
   * Document stores
@@ -204,10 +204,26 @@ grant select,update on Table 'tablename';
 ]
 .right-column[
 advantages
-* easy to use
+* referential integrity of datas is guaranteed
+
+* normalization of datas within the database
+
+* relationships between datas
+
+* transactions can be used to get reports
 
 disadvantages
 * each transaction on a table, block this table (isolation)
+
+* data must be in structed format
+
+* change data type from a table can be a problem
+
+* complex join querys over multiple tables can impact the performance
+
+* high impact while reprocessing of the datas to work with the database
+  * raw data will be lost at this transaction
+
 ]
 
 ---
@@ -216,11 +232,14 @@ disadvantages
 ## SQL
 ### DLL,DML,DCL
 ### advantages / disadvantages
-### usecases
+### use cases
 ]
 .right-column[
-* sql is used from many companys, how need a relational database
-]
+* rdbms is used by many companys, which are using accounting or customer informations
+  * easy to save customer informations
+  * easy to get reports with join,select dml 
+  ]
+
 ---
 
 .left-column[
@@ -265,6 +284,24 @@ db.awesome.find ({})
 ### advantages / disadvantages
 ]
 .right-column[
+advantages
+* data must not be preprocessing to load these data into the database
+
+* Scale-Out and high avability
+
+* unstrcuted datas
+
+* can work with large datas
+
+disadvantages
+* flexible schema, if a process in the backend work with these datas
+  * maybe data must be manualle modified
+
+* eventual consistency
+  * within a transaction is in progres, datas can be inconsistency
+
+* 
+
 
 ]
 ---
@@ -273,10 +310,12 @@ db.awesome.find ({})
 ## NoSQL
 ### DDL,DML
 ### advantages / disadvantages
-### usecases
+### use cases
 ]
 .right-column[
-* best for large datas, where algorithm will chech the datas
+* social media plattforms or shopping plattform are using with NoSQL Databases
+  * working better with algorithm
+  * much faster then sql
 ]
 
 ---
