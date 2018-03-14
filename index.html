@@ -206,13 +206,14 @@ grant select,update on Table 'tablename';
 ]
 .right-column[
 Advantages
-* referential integrity of datas is guaranteed
+* referential integrity of data is guaranteed
 
 * normalization of datas within the database
 
 * relationships between datas
 
-* transactions can be used to get reports
+* transactions(select,join) can be used to get informations
+  multiple tables
 ]
 
 ---
@@ -227,14 +228,17 @@ Advantages
 Disadvantages
 * each transaction on a table, block this table (isolation)
 
-* data must be in structed format
-
-* change data type from a table can be a problem
+* data which will be insert into the database, must be structured
+  
+* change column type from a table can be a problem
 
 * complex join querys over multiple tables can impact the performance
 
-* high impact while reprocessing of the datas to work with the database
-  * raw data will be lost at this transaction
+* every data which is unstructured, must be modified that it can
+  be insert into the DBMS
+
+* if alter table command will be performed on a table, this action
+  can take much time, because each entitiy will be modified
 
 ]
 
@@ -258,7 +262,7 @@ Disadvantages
 
 .left-column[
 ## NoSQL
-### DDL,DML
+### DDL
 ]
 .right-column[
 * Data definition Language
@@ -267,7 +271,16 @@ Disadvantages
 ```json
 db.createCollection ("awesome")
 ```
+]
 
+---
+
+.left-column[
+## NoSQL
+### DDL
+### DML
+]
+.right-column[
 * Data Manipulation Language
 
 ### insert
@@ -295,37 +308,43 @@ db.awesome.find ({})
 
 .left-column[
 ## NoSQL
-### DDL,DML
+### DDL
+### DML
 ### Advantages
 ]
 .right-column[
 Advantages
-* data must not be preprocessing to load these data into the database
+* each entitiy must not be modified to load these data into the DB
 
 * Scale-Out and high avability
+  * easy to duplicate and add nodes to a cluster
 
-* unstrcuted datas
+  * a single node, must handle all transaction, if failure detected
+
+* unstructed data
 
 * can work with large datas
 
-* better performance, then rdbms
+* better performance then RDBMS
 ]
 
 ---
 
 .left-column[
 ## NoSQL
-### DDL,DML
+### DDL
+### DML
 ### Advantages
 ### Disadvantages
 ]
 .right-column[
 Disadvantages
-* flexible schema, if a process in the backend work with these datas
-  * maybe data must be manualle modified
+* a flexible schema can be a problem, if an application from an server work
+  with these data from the DB
+  * maybe data must be manually modified first
 
 * eventual consistency
-  * within a transaction is in progres, datas can be inconsistency
+  * within a transaction is in progres, data can be inconsistency
 
 * simple queries require programming expertise
 ]
@@ -333,7 +352,8 @@ Disadvantages
 
 .left-column[
 ## NoSQL
-### DDL,DML
+### DDL
+### DML
 ### Advantages
 ### Disadvantages
 ### Use Cases
